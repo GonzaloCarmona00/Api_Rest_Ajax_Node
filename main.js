@@ -3,7 +3,8 @@ $(function(){
         console.log('Buscando Usuarios');
         
         $.ajax({
-            url: 'http://localhost:3000/users',
+            //url: 'http://localhost:3000/users',
+            url: "https://my-json-server.typicode.com/GonzaloCarmona00/Api_Rest_Ajax_Node/users",
             type: 'GET',
             dataType: 'json',
 
