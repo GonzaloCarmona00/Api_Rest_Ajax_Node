@@ -1,5 +1,9 @@
 $(function(){
-    function buscar_productos(){
+
+    let usuario1 = $("#usuarioBase");
+
+
+    function buscar_usuarios(){
         console.log('Buscando Usuarios');
         
         $.ajax({
@@ -11,6 +15,10 @@ $(function(){
             success: function(data){
                 console.log('Respuesta ok');
                 console.log(data);
+
+                for(usuario of data){
+                    $("#usuariosContenedor").append(usuario1.clone());
+                }
             },
 
             error: function(request, error){
@@ -18,8 +26,5 @@ $(function(){
             }
         });
     }
-
-    $('#Button1').on('click', function(){
-        buscar_productos();
-    });
+    buscar_usuarios();
 });
